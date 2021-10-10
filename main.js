@@ -1,3 +1,4 @@
-exports.testing = function() {
-   console.log('It\'s working!');
-};
+// Dummy import.
+const createTestingString = require('./src/template/template');
+
+module.exports = createTestingString;
