@@ -35,6 +35,7 @@ Every module file must export only the basic function. All helper functions must
 In the spec file, there must be an extensive and well-covered suite of test cases. The actual testing is done by the [Jest](https://github.com/facebook/jest) library. To run the unit-test, execute the following:
 ```bash
 npm run test
+```
 
 ### <a id="dod"></a> Definition of Done
 One task is completed when:
