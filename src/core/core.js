@@ -29,7 +29,7 @@ function cleanNumberRepresentation(numberRepresentation, regex, localeConfigurat
 
       return cleanNumberRepresentation;
    } else {
-      console.error(`The number representation does match the given locale.`);
+      console.warn(`The number representation does match the given locale.`);
       return null;
    }
 }
@@ -53,4 +53,8 @@ function getNumber(numberRepresentation, locale) {
    }
 }
 
-module.exports = getNumber;
+module.exports = {
+   constructExtractionRegex,
+   cleanNumberRepresentation,
+   getNumber
+};
