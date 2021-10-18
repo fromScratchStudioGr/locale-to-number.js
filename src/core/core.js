@@ -29,7 +29,7 @@ function cleanNumberRepresentation(
     // Removing the `thousands` separator and making
     // sure the `decimal` separator is the `dot`.
     const cleanNumberRepresentation = numberRepresentation
-      .replace(localeConfiguration.thousands, '')
+      .replace(new RegExp(`\\${localeConfiguration.thousands}`, 'g'), '')
       .replace(localeConfiguration.decimal, '.');
 
     return cleanNumberRepresentation;
