@@ -1,4 +1,4 @@
-const localeMapper = require('./locale-mapper');
+const localeMapper = require('../locale-mapper');
 
 /**
  * Constructions the regular expression that can be used to match
