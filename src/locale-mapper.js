@@ -5,14 +5,14 @@
  * https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Supported-Locales
  */
 const localeMapper = {
-   'en': {
-      thousands: ',',
-      decimal: '.'
-   },
-   'el': {
-      thousands: '.',
-      decimal: ','
-   }
+  en: {
+    thousands: ',',
+    decimal: '.',
+  },
+  el: {
+    thousands: '.',
+    decimal: ',',
+  },
 };
 
 module.exports = localeMapper;

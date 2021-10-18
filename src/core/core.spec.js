@@ -1,7 +1,4 @@
-const {
-  constructExtractionRegex,
-  cleanNumberRepresentation,
-} = require('./core');
+const { constructExtractionRegex, cleanNumberRepresentation } = require('./core');
 
 beforeEach(() => {
   // Making sure the `console.error` implementation is empty
@@ -45,9 +42,7 @@ describe('Testing `cleanNumber` function', () => {
     const testCases = [
       {
         numberRepresentation: '20.000',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: '.',
           decimal: ',',
@@ -56,9 +51,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20.000,5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: '.',
           decimal: ',',
@@ -67,9 +60,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20.000,567',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: '.',
           decimal: ',',
@@ -78,9 +69,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '200,5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: '.',
           decimal: ',',
@@ -89,9 +78,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '1.200,00',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: '.',
           decimal: ',',
@@ -100,9 +87,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: '.',
           decimal: ',',
@@ -111,9 +96,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20,000',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ',',
           decimal: '.',
@@ -122,9 +105,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20,000.5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ',',
           decimal: '.',
@@ -133,9 +114,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20,000.567',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ',',
           decimal: '.',
@@ -144,9 +123,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '200.5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ',',
           decimal: '.',
@@ -155,9 +132,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '1,200.00',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ',',
           decimal: '.',
@@ -166,9 +141,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(,([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ',',
           decimal: '.',
@@ -177,9 +150,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20 000',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: '.',
@@ -188,9 +159,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20 000.5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: '.',
@@ -199,9 +168,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20 000.567',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: '.',
@@ -210,9 +177,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '200.5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: '.',
@@ -221,9 +186,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '1 200.00',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: '.',
@@ -232,9 +195,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: '.',
@@ -243,9 +204,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20 000',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: ',',
@@ -254,9 +213,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20 000,5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: ',',
@@ -265,9 +222,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '20 000,567',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: ',',
@@ -276,9 +231,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '200,5',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: ',',
@@ -287,9 +240,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '1 200,00',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: ',',
@@ -298,9 +249,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: ',',
@@ -309,9 +258,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "20'000",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: '.',
@@ -320,9 +267,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "20'000.5",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: '.',
@@ -331,9 +276,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "20'000.567",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: '.',
@@ -342,9 +285,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '200.5',
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: '.',
@@ -353,9 +294,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "1'200.00",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: '.',
@@ -364,9 +303,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50',
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: '.',
@@ -375,9 +312,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "20'000",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: ',',
@@ -386,9 +321,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "20'000,5",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: ',',
@@ -397,9 +330,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "20'000,567",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: ',',
@@ -408,9 +339,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '200,5',
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: ',',
@@ -419,9 +348,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: "1'200,00",
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: ',',
@@ -430,9 +357,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50',
-        regex: new RegExp(
-          "^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"),
         localeConfiguration: {
           thousands: "'",
           decimal: ',',
@@ -443,11 +368,7 @@ describe('Testing `cleanNumber` function', () => {
 
     testCases.forEach((testCase) => {
       expect(
-        cleanNumberRepresentation(
-          testCase.numberRepresentation,
-          testCase.regex,
-          testCase.localeConfiguration
-        )
+        cleanNumberRepresentation(testCase.numberRepresentation, testCase.regex, testCase.localeConfiguration)
       ).toEqual(testCase.result);
     });
   });
@@ -457,9 +378,7 @@ describe('Testing `cleanNumber` function', () => {
     const testCases = [
       {
         numberRepresentation: '50,000.12',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}(.([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: '.',
           decimal: ',',
@@ -467,9 +386,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50,000.12',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(.[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: '.',
@@ -477,9 +394,7 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50.000,12',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp('^([+|-])?[1-9]{1}[0-9]{0,2}( ([0-9]{3}))*(,[0-9]+)?$'),
         localeConfiguration: {
           thousands: ' ',
           decimal: ',',
@@ -487,33 +402,25 @@ describe('Testing `cleanNumber` function', () => {
       },
       {
         numberRepresentation: '50.000,12',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(\'([0-9]{3}))*(,[0-9]+)?$'
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(,[0-9]+)?$"),
         localeConfiguration: {
-          thousands: '\'',
+          thousands: "'",
           decimal: ',',
         },
       },
       {
         numberRepresentation: '50.000,12',
-        regex: new RegExp(
-          '^([+|-])?[1-9]{1}[0-9]{0,2}(\'([0-9]{3}))*(.[0-9]+)?$'
-        ),
+        regex: new RegExp("^([+|-])?[1-9]{1}[0-9]{0,2}('([0-9]{3}))*(.[0-9]+)?$"),
         localeConfiguration: {
-          thousands: '\'',
+          thousands: "'",
           decimal: '.',
         },
-      }
+      },
     ];
 
     testCases.forEach((testCase) => {
       expect(
-        cleanNumberRepresentation(
-          testCase.numberRepresentation,
-          testCase.regex,
-          testCase.localeConfiguration
-        )
+        cleanNumberRepresentation(testCase.numberRepresentation, testCase.regex, testCase.localeConfiguration)
       ).toEqual(null);
     });
   });
