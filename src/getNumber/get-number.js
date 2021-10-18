@@ -1,4 +1,8 @@
 const localeMapper = require('../locale-mapper');
+const {
+  constructExtractionRegex,
+  cleanNumberRepresentation,
+} = require('../core/core');
 
 /**
  * Gets the actual decimal literal of the given number.
