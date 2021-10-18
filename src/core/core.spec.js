@@ -1,7 +1,5 @@
 const {
   constructExtractionRegex,
-  cleanNumber,
-  getNumber,
   cleanNumberRepresentation,
 } = require('./core');
 
