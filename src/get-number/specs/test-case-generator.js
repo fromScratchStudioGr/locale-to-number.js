@@ -1,30 +1,56 @@
 /**
  * Returns a random integer in the range of [min, max].
- * @param {number} min - The minimum number of the range. 
+ * @param {number} min - The minimum number of the range.
  * @param {number} max - The maximum number of the range.
- * @returns 
+ * @returns
  */
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 /**
- * Randomly generates valid test cases for integer numbers.
- * @param {string} locale - The desired locale. 
+ * Returns a random float in the range of [min, max].
+ * @param {number} min - The minimum number of the range.
+ * @param {number} max - The maximum number of the range.
+ * @returns
+ */
+function randomFloat(min, max) {
+  return Math.random() * (max - min + 1) + min;
+}
+
+/**
+ * Randomly generates valid test cases for numbers. Half of the
+ * test cases are integers, while the rest of them are floats.
+ * @param {string} locale - The desired locale.
  * @param {number} from - The lowest possible number for a test case.
  * @param {number} to - The highest possible number for a test case.
  * @param {number} numberOfTestCases - The number of test cases.
- * @returns 
+ * @returns
  */
 function testCaseGenerator(locale, from, to, numberOfTestCases) {
   const testCases = [];
+  let integer = true;
   for (let i = 0; i < numberOfTestCases; i++) {
-    const groundTruth = randomInt(from, to);
-    const stringRepresentation = new Intl.NumberFormat(locale).format(groundTruth);
-    testCases.push({
-      groundTruth,
-      stringRepresentation
-    });
+    if (integer) {
+      const groundTruth = randomInt(from, to);
+      testCases.push({
+        groundTruth,
+        stringRepresentation: new Intl.NumberFormat(locale, {
+          minimumFractionDigits: 20,
+          maximumFractionDigits: 20,
+        }).format(groundTruth),
+      });
+    } else {
+      const groundTruth = randomFloat(from, to);
+      testCases.push({
+        groundTruth,
+        stringRepresentation: new Intl.NumberFormat(locale, {
+          minimumFractionDigits: 20,
+          maximumFractionDigits: 20,
+        }).format(groundTruth),
+      });
+    }
+    integer = !integer;
   }
 
   return testCases;
