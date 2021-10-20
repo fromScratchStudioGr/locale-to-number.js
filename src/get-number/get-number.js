@@ -15,7 +15,7 @@ function getNumber(numberRepresentation, locale) {
 
     return cleanNumber != null ? parseFloat(cleanNumber) : null;
   } else {
-    console.error(`Locale: ${locale} is not supported`);
+    console.warn(`Locale: ${locale} is not supported`);
     return null;
   }
 }
