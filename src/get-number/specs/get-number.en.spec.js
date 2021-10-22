@@ -10,6 +10,10 @@ beforeEach(() => {
 describe('Testing `getNumber` with `en` locale on positive numbers', () => {
   test(`(Manually) It should return a positive decimal literal when given an 
   implicitly positive string representation`, () => {
+    expect(getNumber('0.0', 'en')).toBeCloseTo(0.0, 20);
+    expect(getNumber('0.45', 'en')).toBeCloseTo(0.45, 20);
+    expect(getNumber('0.3', 'en')).toBeCloseTo(0.3, 20);
+    expect(getNumber('0.243225', 'en')).toBeCloseTo(0.243225, 20);
     expect(getNumber('200', 'en')).toBeCloseTo(200, 20);
     expect(getNumber('200.45', 'en')).toBeCloseTo(200.45, 20);
     expect(getNumber('873.00', 'en')).toBeCloseTo(873.0, 20);
@@ -25,6 +29,10 @@ describe('Testing `getNumber` with `en` locale on positive numbers', () => {
 
   test(`(Manually) It should return a positive decimal literal when given an 
   explicitly positive string representation`, () => {
+    expect(getNumber('+0.0', 'en')).toBeCloseTo(0.0, 20);
+    expect(getNumber('+0.45', 'en')).toBeCloseTo(0.45, 20);
+    expect(getNumber('+0.3', 'en')).toBeCloseTo(0.3, 20);
+    expect(getNumber('+0.243225', 'en')).toBeCloseTo(0.243225, 20);
     expect(getNumber('+200', 'en')).toBeCloseTo(200, 20);
     expect(getNumber('+200.45', 'en')).toBeCloseTo(200.45, 20);
     expect(getNumber('+873.00', 'en')).toBeCloseTo(873.0, 20);
@@ -36,6 +44,14 @@ describe('Testing `getNumber` with `en` locale on positive numbers', () => {
     expect(getNumber('+200,000', 'en')).toBeCloseTo(200000, 20);
     expect(getNumber('+2,000,000', 'en')).toBeCloseTo(2000000, 20);
     expect(getNumber('+12,054,100.55', 'en')).toBeCloseTo(12054100.55, 20);
+  });
+
+  test(`(Automatically)(Range: [0, 1]) It should return a possible decimal literal when given an
+  implicitly positive string representation`, () => {
+    const testCases = testCaseGenerator('en', 0, 0, 1000);
+    testCases.forEach((testCase) => {
+      expect(getNumber(testCase.stringRepresentation, 'en')).toBeCloseTo(testCase.groundTruth, 20);
+    });
   });
 
   test(`(Automatically)(Range: [1, 100]) It should return a possible decimal literal when given an
@@ -146,6 +162,10 @@ describe('Testing `getNumber` with `en` locale on positive numbers', () => {
 describe('Testing `getNumber` with `en` locale on negative numbers', () => {
   test(`(Manually) It should return a negative decimal literal when given a
   negative string representation`, () => {
+    expect(getNumber('-0.0', 'en')).toBeCloseTo(-0.0, 20);
+    expect(getNumber('-0.45', 'en')).toBeCloseTo(-0.45, 20);
+    expect(getNumber('-0.3', 'en')).toBeCloseTo(-0.3, 20);
+    expect(getNumber('-0.243225', 'en')).toBeCloseTo(-0.243225, 20);
     expect(getNumber('-200', 'en')).toBeCloseTo(-200, 20);
     expect(getNumber('-200.45', 'en')).toBeCloseTo(-200.45, 20);
     expect(getNumber('-873.00', 'en')).toBeCloseTo(-873.0, 20);
@@ -157,6 +177,14 @@ describe('Testing `getNumber` with `en` locale on negative numbers', () => {
     expect(getNumber('-200,000', 'en')).toBeCloseTo(-200000, 20);
     expect(getNumber('-2,000,000', 'en')).toBeCloseTo(-2000000, 20);
     expect(getNumber('-12,054,100.55', 'en')).toBeCloseTo(-12054100.55, 20);
+  });
+
+  test(`(Automatically)(Range: [-1, 0]) It should return a possible decimal literal when given an
+  negative string representation`, () => {
+    const testCases = testCaseGenerator('en', 0, -2, 1000);
+    testCases.forEach((testCase) => {
+      expect(getNumber(testCase.stringRepresentation, 'en')).toBeCloseTo(testCase.groundTruth, 20);
+    });
   });
 
   test(`(Automatically)(Range: [-100, -1]) It should return a possible decimal literal when given an
@@ -265,6 +293,6 @@ describe('Testing `getNumber` with `en` locale on invalid cases', () => {
   match the given locale`, () => {
     expect(getNumber('120.000,23', 'en')).toBe(null);
     expect(getNumber('12 000.23', 'en')).toBe(null);
-    expect(getNumber('12\'000,23', 'en')).toBe(null);
+    expect(getNumber("12'000,23", 'en')).toBe(null);
   });
 });
