@@ -1,7 +1,7 @@
 # Contribution Guidelines
 
 ## Who can contribute?
-Anyone can contribute to the project. However, one must follow strictly the contribution guidelines.
+Anyone can contribute to the project. However, one must follow strictly the contribution guidelines and read through the [Project Structure](https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Project-Structure) page.
 
 ## Branching
 Regarding branching, the `main` branch will contain the latest released version publicly available via `npm`. The `integration` branch will contain the code that is actively being developed and tested. Each new locale, code refactoring or bug fix, will be handled in a separate branch. When the actual implementation is over and the needed unit tests are written, the developer can create a PR on the `integration` branch. Until the first major release the package will not be publicly available. Thus, the integration branch will not be used.
@@ -19,18 +19,20 @@ locale-to-number.js
 │
 └───src
 │   │
-│   └───locale-en
-│       │   locale-en.js
-│       │   local-en.spec.js      
+│   └───core
+│       └───core.js
+│       └───core.spec.js      
 ```
-The actual module name must follow the `camelCase` convention. In the aforementioned example, the module must be named `localeEn`. For more details, check the `create-template-string.js` file.
+The actual module name must follow the `camelCase` convention. For more details, check the `create-template-string.js` file.
 
-Every module file must export only the basic function. All helper functions must stay *hidden* from the outside world. Every function in a module must be properly commented using the [JSDoc](https://jsdoc.app/) convention.
+Every function in a module must be properly commented using the [JSDoc](https://jsdoc.app/) convention. The code must be properly formatted by following the rules stated in the `.prettierrc` file.
 
 In the spec file, there must be an extensive and well-covered suite of test cases. The actual testing is done by the [Jest](https://github.com/facebook/jest) library. To run the unit-test, execute the following:
 ```bash
 npm run test
 ```
+
+**Note**: The `getNumber` module is special due to the fact that it needs to be tested thoroughly for each supported locale. Thus, only in this module the spec files are located in the `/specs` folder.
 
 ### <a id="dod"></a> Definition of Done
 One task is completed when:
@@ -46,4 +48,5 @@ A PR can be rejected if at least one of the following occurs:
 4) The requirements of the task are not met entirely.
 5) The unit-test coverage is insufficient.
 6) The code is not well-commented.
-7) The JSDoc convention is invalid or insufficient.
+7) The code is not properly formatted.
+8) The JSDoc convention is invalid or insufficient.
