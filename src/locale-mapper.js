@@ -25,6 +25,10 @@ const localeMapper = {
     thousands: ',',
     decimal: '.',
   },
+  'en-nz': {
+    thousands: ',',
+    decimal: '.',
+  },
   'el': {
     thousands: '.',
     decimal: ',',
