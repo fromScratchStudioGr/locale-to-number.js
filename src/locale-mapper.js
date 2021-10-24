@@ -13,6 +13,10 @@ const localeMapper = {
     thousands: ',',
     decimal: '.',
   },
+  'en-ca': {
+    thousands: ',',
+    decimal: '.',
+  },
   'el': {
     thousands: '.',
     decimal: ',',
