@@ -6,32 +6,36 @@
  */
 const localeMapper = {
   'en': {
-    thousands: ',',
-    decimal: '.',
+    thousands: '\\,',
+    decimal: '\\.',
   },
   'en-au': {
-    thousands: ',',
-    decimal: '.',
+    thousands: '\\,',
+    decimal: '\\.',
   },
   'en-ca': {
-    thousands: ',',
-    decimal: '.',
+    thousands: '\\,',
+    decimal: '\\.',
   },
   'en-gb': {
-    thousands: ',',
-    decimal: '.',
+    thousands: '\\,',
+    decimal: '\\.',
   },
   'en-ie': {
-    thousands: ',',
-    decimal: '.',
+    thousands: '\\,',
+    decimal: '\\.',
   },
   'en-nz': {
-    thousands: ',',
-    decimal: '.',
+    thousands: '\\,',
+    decimal: '\\.',
   },
   'en-us': {
-    thousands: ',',
-    decimal: '.',
+    thousands: '\\,',
+    decimal: '\\.',
+  },
+  'en-za': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    decimal: ',',
   },
   'el': {
     thousands: '.',

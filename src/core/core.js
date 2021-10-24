@@ -7,7 +7,7 @@
  * use the given thousands and decimal separators.
  */
 function constructExtractionRegex(thousandsSeparator, decimalSeparator) {
-  return new RegExp(`^[+|-]?([1-9]{1}[0-9]{0,2}(${thousandsSeparator === ' ' ? '' : '\\'}${thousandsSeparator}[0-9]{3})*|0)(\\${decimalSeparator}[0-9]+)?$`);
+  return new RegExp(`^[+|-]?([1-9]{1}[0-9]{0,2}(${thousandsSeparator}[0-9]{3})*|0)(${decimalSeparator}[0-9]+)?$`);
 }
 
 /**
@@ -19,12 +19,13 @@ function constructExtractionRegex(thousandsSeparator, decimalSeparator) {
  * @returns The representation of the number in a string format.
  */
 function cleanNumberRepresentation(numberRepresentation, regex, localeConfiguration) {
+  numberRepresentation = numberRepresentation.trim();
   if (numberRepresentation.match(regex)) {
     // Removing the `thousands` separator and making
     // sure the `decimal` separator is the `dot`.
     const cleanNumberRepresentation = numberRepresentation
-      .replace(new RegExp(`\\${localeConfiguration.thousands}`, 'g'), '')
-      .replace(localeConfiguration.decimal, '.');
+      .replace(new RegExp(localeConfiguration.thousands, 'g'), '')
+      .replace(new RegExp(localeConfiguration.decimal), '.');
 
     return cleanNumberRepresentation;
   } else {
