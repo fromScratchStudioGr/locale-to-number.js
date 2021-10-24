@@ -7,39 +7,39 @@
 const localeMapper = {
   'en': {
     thousands: '\\,',
-    decimal: '\\.',
+    decimal: '\\.'
   },
   'en-au': {
     thousands: '\\,',
-    decimal: '\\.',
+    decimal: '\\.'
   },
   'en-ca': {
     thousands: '\\,',
-    decimal: '\\.',
+    decimal: '\\.'
   },
   'en-gb': {
     thousands: '\\,',
-    decimal: '\\.',
+    decimal: '\\.'
   },
   'en-ie': {
     thousands: '\\,',
-    decimal: '\\.',
+    decimal: '\\.'
   },
   'en-nz': {
     thousands: '\\,',
-    decimal: '\\.',
+    decimal: '\\.'
   },
   'en-us': {
     thousands: '\\,',
-    decimal: '\\.',
+    decimal: '\\.'
   },
   'en-za': {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
-    decimal: ',',
+    decimal: ','
   },
   'el': {
     thousands: '.',
-    decimal: ',',
+    decimal: ','
   },
 };
 

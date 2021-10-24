@@ -3,11 +3,17 @@
  * number which use the given thousands and decimal separators.
  * @param {string} thousandsSeparator - The thousands separator.
  * @param {string} decimalSeparator - The decimal separator.
+ * @param {boolean} indianNotation - Indicates if the Indian notation
+ * must be used.
  * @returns {RegExp} The regular expression that matches number which
  * use the given thousands and decimal separators.
  */
-function constructExtractionRegex(thousandsSeparator, decimalSeparator) {
-  return new RegExp(`^[+|-]?([1-9]{1}[0-9]{0,2}(${thousandsSeparator}[0-9]{3})*|0)(${decimalSeparator}[0-9]+)?$`);
+function constructExtractionRegex(thousandsSeparator, decimalSeparator, indianNotation = false) {
+  if (indianNotation) {
+    return new RegExp(`^[+|-]?(([1-9]{1}[0-9]{0,1}${thousandsSeparator})*[0-9]{3}|[1-9]{1}[0-9]{0,2}|0)(${decimalSeparator}[0-9]+)?$`);
+  } else {
+    return new RegExp(`^[+|-]?([1-9]{1}[0-9]{0,2}(${thousandsSeparator}[0-9]{3})*|0)(${decimalSeparator}[0-9]+)?$`);
+  }
 }
 
 /**
