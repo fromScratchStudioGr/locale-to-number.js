@@ -17,6 +17,10 @@ const localeMapper = {
     thousands: ',',
     decimal: '.',
   },
+  'en-gb': {
+    thousands: ',',
+    decimal: '.',
+  },
   'el': {
     thousands: '.',
     decimal: ',',
