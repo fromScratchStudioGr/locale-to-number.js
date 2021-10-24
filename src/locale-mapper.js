@@ -25,6 +25,11 @@ const localeMapper = {
     thousands: '\\,',
     decimal: '\\.'
   },
+  'en-in': {
+    thousands: '\\,',
+    decimal: '\\.',
+    indianNotation: true
+  },
   'en-nz': {
     thousands: '\\,',
     decimal: '\\.'
@@ -35,11 +40,11 @@ const localeMapper = {
   },
   'en-za': {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
-    decimal: ','
+    decimal: '\\,'
   },
   'el': {
-    thousands: '.',
-    decimal: ','
+    thousands: '\\.',
+    decimal: '\\,'
   },
 };
 
