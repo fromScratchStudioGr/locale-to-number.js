@@ -35,7 +35,7 @@ function testCaseGenerator(locale, from, to, numberOfTestCases) {
       const groundTruth = randomInt(from, to);
       testCases.push({
         groundTruth,
-        stringRepresentation: new Intl.NumberFormat(locale, {
+        stringRepresentation: new Intl.NumberFormat(locale.toLowerCase(), {
           minimumFractionDigits: 20,
           maximumFractionDigits: 20,
         }).format(groundTruth),
@@ -44,7 +44,7 @@ function testCaseGenerator(locale, from, to, numberOfTestCases) {
       const groundTruth = randomFloat(from, to);
       testCases.push({
         groundTruth,
-        stringRepresentation: new Intl.NumberFormat(locale, {
+        stringRepresentation: new Intl.NumberFormat(locale.toLowerCase(), {
           minimumFractionDigits: 20,
           maximumFractionDigits: 20,
         }).format(groundTruth),
