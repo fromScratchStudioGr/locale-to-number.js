@@ -18,15 +18,15 @@ describe('Testing `constructExtractionRegex` function', () => {
     );
 
     expect(constructExtractionRegex(' ', '.')).toEqual(
-      new RegExp('^[+|-]?([1-9]{1}[0-9]{0,2}(\\ [0-9]{3})*|0)(\\.[0-9]+)?$')
+      new RegExp('^[+|-]?([1-9]{1}[0-9]{0,2}( [0-9]{3})*|0)(\\.[0-9]+)?$')
     );
 
     expect(constructExtractionRegex(' ', ',')).toEqual(
-      new RegExp('^[+|-]?([1-9]{1}[0-9]{0,2}(\\ [0-9]{3})*|0)(\\,[0-9]+)?$')
+      new RegExp('^[+|-]?([1-9]{1}[0-9]{0,2}( [0-9]{3})*|0)(\\,[0-9]+)?$')
     );
 
     expect(constructExtractionRegex(' ', '.')).toEqual(
-      new RegExp('^[+|-]?([1-9]{1}[0-9]{0,2}(\\ [0-9]{3})*|0)(\\.[0-9]+)?$')
+      new RegExp('^[+|-]?([1-9]{1}[0-9]{0,2}( [0-9]{3})*|0)(\\.[0-9]+)?$')
     );
 
     expect(constructExtractionRegex("'", '.')).toEqual(
