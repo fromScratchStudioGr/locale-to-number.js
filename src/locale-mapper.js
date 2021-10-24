@@ -47,6 +47,11 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true
   },
+  'hi-in': {
+    thousands: '\\,',
+    decimal: '\\.',
+    indianNotation: true
+  },
   'el': {
     thousands: '\\.',
     decimal: '\\,'
