@@ -5,11 +5,15 @@
  * https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Supported-Locales
  */
 const localeMapper = {
-  en: {
+  'en': {
     thousands: ',',
     decimal: '.',
   },
-  el: {
+  'en-au': {
+    thousands: ',',
+    decimal: '.',
+  },
+  'el': {
     thousands: '.',
     decimal: ',',
   },
