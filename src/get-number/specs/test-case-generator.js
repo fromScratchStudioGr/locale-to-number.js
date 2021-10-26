@@ -36,8 +36,8 @@ function testCaseGenerator(locale, from, to, numberOfTestCases) {
       testCases.push({
         groundTruth,
         stringRepresentation: new Intl.NumberFormat(locale.toLowerCase(), {
-          minimumFractionDigits: 20,
-          maximumFractionDigits: 20,
+          minimumFractionDigits: supportedNumberOfFractionDigits + 1,
+          maximumFractionDigits: supportedNumberOfFractionDigits + 1,
         }).format(groundTruth),
       });
     } else {
@@ -45,8 +45,8 @@ function testCaseGenerator(locale, from, to, numberOfTestCases) {
       testCases.push({
         groundTruth,
         stringRepresentation: new Intl.NumberFormat(locale.toLowerCase(), {
-          minimumFractionDigits: 20,
-          maximumFractionDigits: 20,
+          minimumFractionDigits: supportedNumberOfFractionDigits + 1,
+          maximumFractionDigits: supportedNumberOfFractionDigits + 1,
         }).format(groundTruth),
       });
     }
@@ -56,4 +56,11 @@ function testCaseGenerator(locale, from, to, numberOfTestCases) {
   return testCases;
 }
 
-module.exports = testCaseGenerator;
+// We, currently, support up to 19 fraction digits.
+const supportedNumberOfFractionDigits = 19;
+
+module.exports = { 
+  testCaseGenerator,
+  supportedNumberOfFractionDigits
+};
+

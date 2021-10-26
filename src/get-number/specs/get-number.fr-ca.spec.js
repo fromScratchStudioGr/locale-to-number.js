@@ -1,5 +1,5 @@
 const getNumber = require('../get-number');
-const testCaseGenerator = require('./test-case-generator');
+const { testCaseGenerator, supportedNumberOfFractionDigits } = require('./test-case-generator');
 
 beforeEach(() => {
   // Making sure the `console.error` implementation is empty
@@ -10,47 +10,50 @@ beforeEach(() => {
 describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   test(`(Manually) It should return a positive decimal literal when given an 
   implicitly positive string representation`, () => {
-    expect(getNumber('0,0', 'fr-CA')).toBeCloseTo(0.0, 20);
-    expect(getNumber('0,45', 'fr-CA')).toBeCloseTo(0.45, 20);
-    expect(getNumber('0,3', 'fr-CA')).toBeCloseTo(0.3, 20);
-    expect(getNumber('0,243225', 'fr-CA')).toBeCloseTo(0.243225, 20);
-    expect(getNumber('200', 'fr-CA')).toBeCloseTo(200, 20);
-    expect(getNumber('200,45', 'fr-CA')).toBeCloseTo(200.45, 20);
-    expect(getNumber('873,00', 'fr-CA')).toBeCloseTo(873.0, 20);
-    expect(getNumber('2 050', 'fr-CA')).toBeCloseTo(2050, 20);
-    expect(getNumber('2 000,30', 'fr-CA')).toBeCloseTo(2000.3, 20);
-    expect(getNumber('2 342,0', 'fr-CA')).toBeCloseTo(2342.0, 20);
-    expect(getNumber('20 000', 'fr-CA')).toBeCloseTo(20000, 20);
-    expect(getNumber('20 000,34', 'fr-CA')).toBeCloseTo(20000.34, 20);
-    expect(getNumber('200 000', 'fr-CA')).toBeCloseTo(200000, 20);
-    expect(getNumber('2 000 000', 'fr-CA')).toBeCloseTo(2000000, 20);
-    expect(getNumber('12 054 100,55', 'fr-CA')).toBeCloseTo(12054100.55, 20);
+    expect(getNumber('0,0', 'fr-CA')).toBeCloseTo(0.0, supportedNumberOfFractionDigits);
+    expect(getNumber('0,45', 'fr-CA')).toBeCloseTo(0.45, supportedNumberOfFractionDigits);
+    expect(getNumber('0,3', 'fr-CA')).toBeCloseTo(0.3, supportedNumberOfFractionDigits);
+    expect(getNumber('0,243225', 'fr-CA')).toBeCloseTo(0.243225, supportedNumberOfFractionDigits);
+    expect(getNumber('200', 'fr-CA')).toBeCloseTo(200, supportedNumberOfFractionDigits);
+    expect(getNumber('200,45', 'fr-CA')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
+    expect(getNumber('873,00', 'fr-CA')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
+    expect(getNumber('2 050', 'fr-CA')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('2 000,30', 'fr-CA')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('2 342,0', 'fr-CA')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('20 000', 'fr-CA')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('20 000,34', 'fr-CA')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('200 000', 'fr-CA')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('2 000 000', 'fr-CA')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('12 054 100,55', 'fr-CA')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Manually) It should return a positive decimal literal when given an 
   explicitly positive string representation`, () => {
-    expect(getNumber('+0,0', 'fr-CA')).toBeCloseTo(0.0, 20);
-    expect(getNumber('+0,45', 'fr-CA')).toBeCloseTo(0.45, 20);
-    expect(getNumber('+0,3', 'fr-CA')).toBeCloseTo(0.3, 20);
-    expect(getNumber('+0,243225', 'fr-CA')).toBeCloseTo(0.243225, 20);
-    expect(getNumber('+200', 'fr-CA')).toBeCloseTo(200, 20);
-    expect(getNumber('+200,45', 'fr-CA')).toBeCloseTo(200.45, 20);
-    expect(getNumber('+873,00', 'fr-CA')).toBeCloseTo(873.0, 20);
-    expect(getNumber('+2 050', 'fr-CA')).toBeCloseTo(2050, 20);
-    expect(getNumber('+2 000,30', 'fr-CA')).toBeCloseTo(2000.3, 20);
-    expect(getNumber('+2 342,0', 'fr-CA')).toBeCloseTo(2342.0, 20);
-    expect(getNumber('+20 000', 'fr-CA')).toBeCloseTo(20000, 20);
-    expect(getNumber('+20 000,34', 'fr-CA')).toBeCloseTo(20000.34, 20);
-    expect(getNumber('+200 000', 'fr-CA')).toBeCloseTo(200000, 20);
-    expect(getNumber('+2 000 000', 'fr-CA')).toBeCloseTo(2000000, 20);
-    expect(getNumber('+12 054 100,55', 'fr-CA')).toBeCloseTo(12054100.55, 20);
+    expect(getNumber('+0,0', 'fr-CA')).toBeCloseTo(0.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+0,45', 'fr-CA')).toBeCloseTo(0.45, supportedNumberOfFractionDigits);
+    expect(getNumber('+0,3', 'fr-CA')).toBeCloseTo(0.3, supportedNumberOfFractionDigits);
+    expect(getNumber('+0,243225', 'fr-CA')).toBeCloseTo(0.243225, supportedNumberOfFractionDigits);
+    expect(getNumber('+200', 'fr-CA')).toBeCloseTo(200, supportedNumberOfFractionDigits);
+    expect(getNumber('+200,45', 'fr-CA')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
+    expect(getNumber('+873,00', 'fr-CA')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+2 050', 'fr-CA')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('+2 000,30', 'fr-CA')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('+2 342,0', 'fr-CA')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+20 000', 'fr-CA')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('+20 000,34', 'fr-CA')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('+200 000', 'fr-CA')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('+2 000 000', 'fr-CA')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('+12 054 100,55', 'fr-CA')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [0, 1]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 0, 0, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -58,7 +61,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 1, 100, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -66,7 +72,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 100, 1000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -74,7 +83,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 1000, 10000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -82,7 +94,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 10000, 100000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -90,7 +105,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 100000, 1000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -98,7 +116,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 1000000, 10000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -106,7 +127,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 10000000, 100000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -114,7 +138,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 100000000, 1000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -122,7 +149,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 1000000000, 10000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -130,7 +160,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 10000000000, 100000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -138,7 +171,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 100000000000, 1000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -146,7 +182,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 1000000000000, 10000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -154,7 +193,10 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
   implicitly positive string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 10000000000000, 100000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 });
@@ -162,28 +204,31 @@ describe('Testing `getNumber` with `fr-CA` locale on positive numbers', () => {
 describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   test(`(Manually) It should return a negative decimal literal when given a
   negative string representation`, () => {
-    expect(getNumber('-0,0', 'fr-CA')).toBeCloseTo(-0.0, 20);
-    expect(getNumber('-0,45', 'fr-CA')).toBeCloseTo(-0.45, 20);
-    expect(getNumber('-0,3', 'fr-CA')).toBeCloseTo(-0.3, 20);
-    expect(getNumber('-0,243225', 'fr-CA')).toBeCloseTo(-0.243225, 20);
-    expect(getNumber('-200', 'fr-CA')).toBeCloseTo(-200, 20);
-    expect(getNumber('-200,45', 'fr-CA')).toBeCloseTo(-200.45, 20);
-    expect(getNumber('-873,00', 'fr-CA')).toBeCloseTo(-873.0, 20);
-    expect(getNumber('-2 050', 'fr-CA')).toBeCloseTo(-2050, 20);
-    expect(getNumber('-2 000,30', 'fr-CA')).toBeCloseTo(-2000.3, 20);
-    expect(getNumber('-2 342,0', 'fr-CA')).toBeCloseTo(-2342.0, 20);
-    expect(getNumber('-20 000', 'fr-CA')).toBeCloseTo(-20000, 20);
-    expect(getNumber('-20 000,34', 'fr-CA')).toBeCloseTo(-20000.34, 20);
-    expect(getNumber('-200 000', 'fr-CA')).toBeCloseTo(-200000, 20);
-    expect(getNumber('-2 000 000', 'fr-CA')).toBeCloseTo(-2000000, 20);
-    expect(getNumber('-12 054 100,55', 'fr-CA')).toBeCloseTo(-12054100.55, 20);
+    expect(getNumber('-0,0', 'fr-CA')).toBeCloseTo(-0.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-0,45', 'fr-CA')).toBeCloseTo(-0.45, supportedNumberOfFractionDigits);
+    expect(getNumber('-0,3', 'fr-CA')).toBeCloseTo(-0.3, supportedNumberOfFractionDigits);
+    expect(getNumber('-0,243225', 'fr-CA')).toBeCloseTo(-0.243225, supportedNumberOfFractionDigits);
+    expect(getNumber('-200', 'fr-CA')).toBeCloseTo(-200, supportedNumberOfFractionDigits);
+    expect(getNumber('-200,45', 'fr-CA')).toBeCloseTo(-200.45, supportedNumberOfFractionDigits);
+    expect(getNumber('-873,00', 'fr-CA')).toBeCloseTo(-873.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-2 050', 'fr-CA')).toBeCloseTo(-2050, supportedNumberOfFractionDigits);
+    expect(getNumber('-2 000,30', 'fr-CA')).toBeCloseTo(-2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('-2 342,0', 'fr-CA')).toBeCloseTo(-2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-20 000', 'fr-CA')).toBeCloseTo(-20000, supportedNumberOfFractionDigits);
+    expect(getNumber('-20 000,34', 'fr-CA')).toBeCloseTo(-20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('-200 000', 'fr-CA')).toBeCloseTo(-200000, supportedNumberOfFractionDigits);
+    expect(getNumber('-2 000 000', 'fr-CA')).toBeCloseTo(-2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('-12 054 100,55', 'fr-CA')).toBeCloseTo(-12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [-1, 0]) It should return a possible decimal literal when given an
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', 0, -2, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -191,7 +236,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -100, -1, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -199,7 +247,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -1000, -100, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -207,7 +258,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -10000, -1000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -215,7 +269,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -100000, -10000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -223,7 +280,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -1000000, -100000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -231,7 +291,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -10000000, -1000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -239,7 +302,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -100000000, -10000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -247,7 +313,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -1000000000, -100000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -255,7 +324,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -10000000000, -1000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -263,7 +335,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -100000000000, -10000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -271,7 +346,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -1000000000000, -100000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 
@@ -279,7 +357,10 @@ describe('Testing `getNumber` with `fr-CA` locale on negative numbers', () => {
   negative string representation`, () => {
     const testCases = testCaseGenerator('fr-CA', -10000000000000, -1000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(testCase.groundTruth, 20);
+      expect(getNumber(testCase.stringRepresentation, 'fr-CA')).toBeCloseTo(
+        testCase.groundTruth,
+        supportedNumberOfFractionDigits
+      );
     });
   });
 });
