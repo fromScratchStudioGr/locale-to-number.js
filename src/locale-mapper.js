@@ -78,6 +78,11 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true
   },
+  'ta-lk': {
+    thousands: '\\,',
+    decimal: '\\.',
+    indianNotation: true
+  },
   'el': {
     thousands: '\\.',
     decimal: '\\,'
