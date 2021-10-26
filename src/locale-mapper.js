@@ -5,6 +5,10 @@
  * https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Supported-Locales
  */
 const localeMapper = {
+  'de': {
+    thousands: '\\.',
+    decimal: '\\,'
+  },
   'en': {
     thousands: '\\,',
     decimal: '\\.'
