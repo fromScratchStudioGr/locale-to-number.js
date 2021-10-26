@@ -9,6 +9,10 @@ const localeMapper = {
     thousands: '\\.',
     decimal: '\\,'
   },
+  'de-de': {
+    thousands: '\\.',
+    decimal: '\\,'
+  },
   'en': {
     thousands: '\\,',
     decimal: '\\.'
