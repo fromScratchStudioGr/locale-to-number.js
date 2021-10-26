@@ -10,7 +10,7 @@ const localeMapper = {
     decimal: '\\,'
   },
   'de-at': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]',
     decimal: '\\,'
   },
   'de-ch': {
@@ -55,6 +55,10 @@ const localeMapper = {
     decimal: '\\.'
   },
   'en-za': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    decimal: '\\,'
+  },
+  'fr': {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
     decimal: '\\,'
   },
