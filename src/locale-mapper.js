@@ -71,7 +71,7 @@ const localeMapper = {
     decimal: '\\,',
   },
   'es-co': {
-    thousands: '\\.',
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'es-es': {
