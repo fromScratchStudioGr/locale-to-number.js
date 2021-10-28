@@ -7,50 +7,50 @@ beforeEach(() => {
   jest.spyOn(console, 'warn').mockImplementation(() => {});
 });
 
-describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
+describe('Testing `getNumber` with `es-AR` locale on positive numbers', () => {
   test(`(Manually) It should return a positive decimal literal when given an 
   implicitly positive string representation`, () => {
-    expect(getNumber('0,0', 'es-ar')).toBeCloseTo(0.0, supportedNumberOfFractionDigits);
-    expect(getNumber('0,45', 'es-ar')).toBeCloseTo(0.45, supportedNumberOfFractionDigits);
-    expect(getNumber('0,3', 'es-ar')).toBeCloseTo(0.3, supportedNumberOfFractionDigits);
-    expect(getNumber('0,243225', 'es-ar')).toBeCloseTo(0.243225, supportedNumberOfFractionDigits);
-    expect(getNumber('200', 'es-ar')).toBeCloseTo(200, supportedNumberOfFractionDigits);
-    expect(getNumber('200,45', 'es-ar')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
-    expect(getNumber('873,00', 'es-ar')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
-    expect(getNumber('2.050', 'es-ar')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
-    expect(getNumber('2.000,30', 'es-ar')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
-    expect(getNumber('2.342,0', 'es-ar')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
-    expect(getNumber('20.000', 'es-ar')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
-    expect(getNumber('20.000,34', 'es-ar')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
-    expect(getNumber('200.000', 'es-ar')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
-    expect(getNumber('2.000.000', 'es-ar')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
-    expect(getNumber('12.054.100,55', 'es-ar')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('0,0', 'es-AR')).toBeCloseTo(0.0, supportedNumberOfFractionDigits);
+    expect(getNumber('0,45', 'es-AR')).toBeCloseTo(0.45, supportedNumberOfFractionDigits);
+    expect(getNumber('0,3', 'es-AR')).toBeCloseTo(0.3, supportedNumberOfFractionDigits);
+    expect(getNumber('0,243225', 'es-AR')).toBeCloseTo(0.243225, supportedNumberOfFractionDigits);
+    expect(getNumber('200', 'es-AR')).toBeCloseTo(200, supportedNumberOfFractionDigits);
+    expect(getNumber('200,45', 'es-AR')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
+    expect(getNumber('873,00', 'es-AR')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
+    expect(getNumber('2.050', 'es-AR')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('2.000,30', 'es-AR')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('2.342,0', 'es-AR')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('20.000', 'es-AR')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('20.000,34', 'es-AR')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('200.000', 'es-AR')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('2.000.000', 'es-AR')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('12.054.100,55', 'es-AR')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Manually) It should return a positive decimal literal when given an 
   explicitly positive string representation`, () => {
-    expect(getNumber('+0,0', 'es-ar')).toBeCloseTo(0.0, supportedNumberOfFractionDigits);
-    expect(getNumber('+0,45', 'es-ar')).toBeCloseTo(0.45, supportedNumberOfFractionDigits);
-    expect(getNumber('+0,3', 'es-ar')).toBeCloseTo(0.3, supportedNumberOfFractionDigits);
-    expect(getNumber('+0,243225', 'es-ar')).toBeCloseTo(0.243225, supportedNumberOfFractionDigits);
-    expect(getNumber('+200', 'es-ar')).toBeCloseTo(200, supportedNumberOfFractionDigits);
-    expect(getNumber('+200,45', 'es-ar')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
-    expect(getNumber('+873,00', 'es-ar')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
-    expect(getNumber('+2.050', 'es-ar')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
-    expect(getNumber('+2.000,30', 'es-ar')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
-    expect(getNumber('+2.342,0', 'es-ar')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
-    expect(getNumber('+20.000', 'es-ar')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
-    expect(getNumber('+20.000,34', 'es-ar')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
-    expect(getNumber('+200.000', 'es-ar')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
-    expect(getNumber('+2.000.000', 'es-ar')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
-    expect(getNumber('+12.054.100,55', 'es-ar')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('+0,0', 'es-AR')).toBeCloseTo(0.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+0,45', 'es-AR')).toBeCloseTo(0.45, supportedNumberOfFractionDigits);
+    expect(getNumber('+0,3', 'es-AR')).toBeCloseTo(0.3, supportedNumberOfFractionDigits);
+    expect(getNumber('+0,243225', 'es-AR')).toBeCloseTo(0.243225, supportedNumberOfFractionDigits);
+    expect(getNumber('+200', 'es-AR')).toBeCloseTo(200, supportedNumberOfFractionDigits);
+    expect(getNumber('+200,45', 'es-AR')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
+    expect(getNumber('+873,00', 'es-AR')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+2.050', 'es-AR')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('+2.000,30', 'es-AR')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('+2.342,0', 'es-AR')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+20.000', 'es-AR')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('+20.000,34', 'es-AR')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('+200.000', 'es-AR')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('+2.000.000', 'es-AR')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('+12.054.100,55', 'es-AR')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [0, 1]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 0, 0, 1000);
+    const testCases = testCaseGenerator('es-AR', 0, 0, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -59,9 +59,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [1, 100]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 1, 100, 1000);
+    const testCases = testCaseGenerator('es-AR', 1, 100, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -70,9 +70,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [100, 1.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 100, 1000, 1000);
+    const testCases = testCaseGenerator('es-AR', 100, 1000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -81,9 +81,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [1.000, 10.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 1000, 10000, 1000);
+    const testCases = testCaseGenerator('es-AR', 1000, 10000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -92,9 +92,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [10.000, 100.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 10000, 100000, 1000);
+    const testCases = testCaseGenerator('es-AR', 10000, 100000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -103,9 +103,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [100.000, 1.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 100000, 1000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 100000, 1000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -114,9 +114,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [1.000.000, 10.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 1000000, 10000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 1000000, 10000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -125,9 +125,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [10.000.000, 100.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 10000000, 100000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 10000000, 100000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -136,9 +136,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [100.000.000, 1.000.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 100000000, 1000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 100000000, 1000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -147,9 +147,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [1.000.000.000, 10.000.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 1000000000, 10000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 1000000000, 10000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -158,9 +158,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [10.000.000.000, 100.000.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 10000000000, 100000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 10000000000, 100000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -169,9 +169,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [100.000.000.000, 1.000.000.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 100000000000, 1000000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 100000000000, 1000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -180,9 +180,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [1.000.000.000.000, 10.000.000.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 1000000000000, 10000000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 1000000000000, 10000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -191,9 +191,9 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
 
   test(`(Automatically)(Range: [10.000.000.000.000, 100.000.000.000.000]) It should return a possible decimal literal when given an
   implicitly positive string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 10000000000000, 100000000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', 10000000000000, 100000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -201,31 +201,31 @@ describe('Testing `getNumber` with `es-ar` locale on positive numbers', () => {
   });
 });
 
-describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
+describe('Testing `getNumber` with `es-AR` locale on negative numbers', () => {
   test(`(Manually) It should return a negative decimal literal when given a
   negative string representation`, () => {
-    expect(getNumber('-0,0', 'es-ar')).toBeCloseTo(-0.0, supportedNumberOfFractionDigits);
-    expect(getNumber('-0,45', 'es-ar')).toBeCloseTo(-0.45, supportedNumberOfFractionDigits);
-    expect(getNumber('-0,3', 'es-ar')).toBeCloseTo(-0.3, supportedNumberOfFractionDigits);
-    expect(getNumber('-0,243225', 'es-ar')).toBeCloseTo(-0.243225, supportedNumberOfFractionDigits);
-    expect(getNumber('-200', 'es-ar')).toBeCloseTo(-200, supportedNumberOfFractionDigits);
-    expect(getNumber('-200,45', 'es-ar')).toBeCloseTo(-200.45, supportedNumberOfFractionDigits);
-    expect(getNumber('-873,00', 'es-ar')).toBeCloseTo(-873.0, supportedNumberOfFractionDigits);
-    expect(getNumber('-2.050', 'es-ar')).toBeCloseTo(-2050, supportedNumberOfFractionDigits);
-    expect(getNumber('-2.000,30', 'es-ar')).toBeCloseTo(-2000.3, supportedNumberOfFractionDigits);
-    expect(getNumber('-2.342,0', 'es-ar')).toBeCloseTo(-2342.0, supportedNumberOfFractionDigits);
-    expect(getNumber('-20.000', 'es-ar')).toBeCloseTo(-20000, supportedNumberOfFractionDigits);
-    expect(getNumber('-20.000,34', 'es-ar')).toBeCloseTo(-20000.34, supportedNumberOfFractionDigits);
-    expect(getNumber('-200.000', 'es-ar')).toBeCloseTo(-200000, supportedNumberOfFractionDigits);
-    expect(getNumber('-2.000.000', 'es-ar')).toBeCloseTo(-2000000, supportedNumberOfFractionDigits);
-    expect(getNumber('-12.054.100,55', 'es-ar')).toBeCloseTo(-12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('-0,0', 'es-AR')).toBeCloseTo(-0.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-0,45', 'es-AR')).toBeCloseTo(-0.45, supportedNumberOfFractionDigits);
+    expect(getNumber('-0,3', 'es-AR')).toBeCloseTo(-0.3, supportedNumberOfFractionDigits);
+    expect(getNumber('-0,243225', 'es-AR')).toBeCloseTo(-0.243225, supportedNumberOfFractionDigits);
+    expect(getNumber('-200', 'es-AR')).toBeCloseTo(-200, supportedNumberOfFractionDigits);
+    expect(getNumber('-200,45', 'es-AR')).toBeCloseTo(-200.45, supportedNumberOfFractionDigits);
+    expect(getNumber('-873,00', 'es-AR')).toBeCloseTo(-873.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-2.050', 'es-AR')).toBeCloseTo(-2050, supportedNumberOfFractionDigits);
+    expect(getNumber('-2.000,30', 'es-AR')).toBeCloseTo(-2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('-2.342,0', 'es-AR')).toBeCloseTo(-2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-20.000', 'es-AR')).toBeCloseTo(-20000, supportedNumberOfFractionDigits);
+    expect(getNumber('-20.000,34', 'es-AR')).toBeCloseTo(-20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('-200.000', 'es-AR')).toBeCloseTo(-200000, supportedNumberOfFractionDigits);
+    expect(getNumber('-2.000.000', 'es-AR')).toBeCloseTo(-2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('-12.054.100,55', 'es-AR')).toBeCloseTo(-12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [-1, 0]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', 0, -2, 1000);
+    const testCases = testCaseGenerator('es-AR', 0, -2, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -234,9 +234,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-100, -1]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -100, -1, 1000);
+    const testCases = testCaseGenerator('es-AR', -100, -1, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -245,9 +245,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-1.000, -100]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -1000, -100, 1000);
+    const testCases = testCaseGenerator('es-AR', -1000, -100, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -256,9 +256,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-10.000, -1.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -10000, -1000, 1000);
+    const testCases = testCaseGenerator('es-AR', -10000, -1000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -267,9 +267,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-100.000, -10.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -100000, -10000, 1000);
+    const testCases = testCaseGenerator('es-AR', -100000, -10000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -278,9 +278,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-1.000.000, -100.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -1000000, -100000, 1000);
+    const testCases = testCaseGenerator('es-AR', -1000000, -100000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -289,9 +289,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-10.000.000, -1.000.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -10000000, -1000000, 1000);
+    const testCases = testCaseGenerator('es-AR', -10000000, -1000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -300,9 +300,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-100.000.000, -10.000.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -100000000, -10000000, 1000);
+    const testCases = testCaseGenerator('es-AR', -100000000, -10000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -311,9 +311,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-1.000.000.000, -100.000.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -1000000000, -100000000, 1000);
+    const testCases = testCaseGenerator('es-AR', -1000000000, -100000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -322,9 +322,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-10.000.000.000, -1.000.000.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -10000000000, -1000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', -10000000000, -1000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -333,9 +333,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-100.000.000.000, -10.000.000.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -100000000000, -10000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', -100000000000, -10000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -344,9 +344,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-1.000.000.000.000, -100.000.000.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -1000000000000, -100000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', -1000000000000, -100000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -355,9 +355,9 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
 
   test(`(Automatically)(Range: [-10.000.000.000.000, -1.000.000.000.000]) It should return a possible decimal literal when given an
   negative string representation`, () => {
-    const testCases = testCaseGenerator('es-ar', -10000000000000, -1000000000000, 1000);
+    const testCases = testCaseGenerator('es-AR', -10000000000000, -1000000000000, 1000);
     testCases.forEach((testCase) => {
-      expect(getNumber(testCase.stringRepresentation, 'es-ar')).toBeCloseTo(
+      expect(getNumber(testCase.stringRepresentation, 'es-AR')).toBeCloseTo(
         testCase.groundTruth,
         supportedNumberOfFractionDigits
       );
@@ -365,15 +365,15 @@ describe('Testing `getNumber` with `es-ar` locale on negative numbers', () => {
   });
 });
 
-describe('Testing `getNumber` with `es-ar` locale on invalid cases', () => {
+describe('Testing `getNumber` with `es-AR` locale on invalid cases', () => {
   test(`(Manually) It should return 'null' when locale is not supported`, () => {
     expect(getNumber('120', 'unsupported-locale')).toBe(null);
   });
 
   test(`(Manually) It should return 'null' when the given number does not
   match the given locale`, () => {
-    expect(getNumber('120,000.23', 'es-ar')).toBe(null);
-    expect(getNumber('12 000.23', 'es-ar')).toBe(null);
-    expect(getNumber("12'000,23", 'es-ar')).toBe(null);
+    expect(getNumber('120,000.23', 'es-AR')).toBe(null);
+    expect(getNumber('12 000.23', 'es-AR')).toBe(null);
+    expect(getNumber("12'000,23", 'es-AR')).toBe(null);
   });
 });
