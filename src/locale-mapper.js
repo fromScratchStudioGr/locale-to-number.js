@@ -26,7 +26,7 @@ const localeMapper = {
     decimal: '\\.',
   },
   'en-au': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-ca': {
