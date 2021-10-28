@@ -83,7 +83,7 @@ const localeMapper = {
     decimal: '\\.',
   },
   'es-us': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'fr': {

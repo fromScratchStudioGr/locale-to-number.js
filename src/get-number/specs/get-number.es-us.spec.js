@@ -18,13 +18,21 @@ describe('Testing `getNumber` with `es-US` locale on positive numbers', () => {
     expect(getNumber('200.45', 'es-US')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
     expect(getNumber('873.00', 'es-US')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
     expect(getNumber('2,050', 'es-US')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('2050', 'es-US')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
     expect(getNumber('2,000.30', 'es-US')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('2000.30', 'es-US')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
     expect(getNumber('2,342.0', 'es-US')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('2342.0', 'es-US')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
     expect(getNumber('20,000', 'es-US')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('20000', 'es-US')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
     expect(getNumber('20,000.34', 'es-US')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('20000.34', 'es-US')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
     expect(getNumber('200,000', 'es-US')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('200000', 'es-US')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
     expect(getNumber('2,000,000', 'es-US')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('2000000', 'es-US')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
     expect(getNumber('12,054,100.55', 'es-US')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('12054100.55', 'es-US')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Manually) It should return a positive decimal literal when given an 
@@ -37,13 +45,21 @@ describe('Testing `getNumber` with `es-US` locale on positive numbers', () => {
     expect(getNumber('+200.45', 'es-US')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
     expect(getNumber('+873.00', 'es-US')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
     expect(getNumber('+2,050', 'es-US')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('+2050', 'es-US')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
     expect(getNumber('+2,000.30', 'es-US')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('+2000.30', 'es-US')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
     expect(getNumber('+2,342.0', 'es-US')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+2342.0', 'es-US')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
     expect(getNumber('+20,000', 'es-US')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('+20000', 'es-US')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
     expect(getNumber('+20,000.34', 'es-US')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('+20000.34', 'es-US')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
     expect(getNumber('+200,000', 'es-US')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('+200000', 'es-US')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
     expect(getNumber('+2,000,000', 'es-US')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('+2000000', 'es-US')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
     expect(getNumber('+12,054,100.55', 'es-US')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('+12054100.55', 'es-US')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [0, 1]) It should return a possible decimal literal when given an
@@ -212,13 +228,21 @@ describe('Testing `getNumber` with `es-US` locale on negative numbers', () => {
     expect(getNumber('-200.45', 'es-US')).toBeCloseTo(-200.45, supportedNumberOfFractionDigits);
     expect(getNumber('-873.00', 'es-US')).toBeCloseTo(-873.0, supportedNumberOfFractionDigits);
     expect(getNumber('-2,050', 'es-US')).toBeCloseTo(-2050, supportedNumberOfFractionDigits);
+    expect(getNumber('-2050', 'es-US')).toBeCloseTo(-2050, supportedNumberOfFractionDigits);
     expect(getNumber('-2,000.30', 'es-US')).toBeCloseTo(-2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('-2000.30', 'es-US')).toBeCloseTo(-2000.3, supportedNumberOfFractionDigits);
     expect(getNumber('-2,342.0', 'es-US')).toBeCloseTo(-2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-2342.0', 'es-US')).toBeCloseTo(-2342.0, supportedNumberOfFractionDigits);
     expect(getNumber('-20,000', 'es-US')).toBeCloseTo(-20000, supportedNumberOfFractionDigits);
+    expect(getNumber('-20000', 'es-US')).toBeCloseTo(-20000, supportedNumberOfFractionDigits);
     expect(getNumber('-20,000.34', 'es-US')).toBeCloseTo(-20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('-20000.34', 'es-US')).toBeCloseTo(-20000.34, supportedNumberOfFractionDigits);
     expect(getNumber('-200,000', 'es-US')).toBeCloseTo(-200000, supportedNumberOfFractionDigits);
+    expect(getNumber('-200000', 'es-US')).toBeCloseTo(-200000, supportedNumberOfFractionDigits);
     expect(getNumber('-2,000,000', 'es-US')).toBeCloseTo(-2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('-2000000', 'es-US')).toBeCloseTo(-2000000, supportedNumberOfFractionDigits);
     expect(getNumber('-12,054,100.55', 'es-US')).toBeCloseTo(-12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('-12054100.55', 'es-US')).toBeCloseTo(-12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [-1, 0]) It should return a possible decimal literal when given an
