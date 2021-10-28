@@ -107,7 +107,7 @@ const localeMapper = {
     decimal: '\\,',
   },
   'hi': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
