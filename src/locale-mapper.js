@@ -91,7 +91,7 @@ const localeMapper = {
     decimal: '\\,',
   },
   'fr-be': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'fr-ca': {
