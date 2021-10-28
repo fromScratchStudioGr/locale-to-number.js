@@ -30,7 +30,7 @@ const localeMapper = {
     decimal: '\\.',
   },
   'en-ca': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-gb': {
