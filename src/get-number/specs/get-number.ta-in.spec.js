@@ -18,13 +18,21 @@ describe('Testing `getNumber` with `ta-in` locale on positive numbers', () => {
     expect(getNumber('200.45', 'ta-in')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
     expect(getNumber('873.00', 'ta-in')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
     expect(getNumber('2,050', 'ta-in')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('2050', 'ta-in')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
     expect(getNumber('2,000.30', 'ta-in')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('2000.30', 'ta-in')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
     expect(getNumber('2,342.0', 'ta-in')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('2342.0', 'ta-in')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
     expect(getNumber('20,000', 'ta-in')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('20000', 'ta-in')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
     expect(getNumber('20,000.34', 'ta-in')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('20000.34', 'ta-in')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
     expect(getNumber('2,00,000', 'ta-in')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('200000', 'ta-in')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
     expect(getNumber('20,00,000', 'ta-in')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('2000000', 'ta-in')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
     expect(getNumber('1,20,54,100.55', 'ta-in')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('12054100.55', 'ta-in')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Manually) It should return a positive decimal literal when given an 
@@ -37,13 +45,21 @@ describe('Testing `getNumber` with `ta-in` locale on positive numbers', () => {
     expect(getNumber('+200.45', 'ta-in')).toBeCloseTo(200.45, supportedNumberOfFractionDigits);
     expect(getNumber('+873.00', 'ta-in')).toBeCloseTo(873.0, supportedNumberOfFractionDigits);
     expect(getNumber('+2,050', 'ta-in')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
+    expect(getNumber('+2050', 'ta-in')).toBeCloseTo(2050, supportedNumberOfFractionDigits);
     expect(getNumber('+2,000.30', 'ta-in')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('+2000.30', 'ta-in')).toBeCloseTo(2000.3, supportedNumberOfFractionDigits);
     expect(getNumber('+2,342.0', 'ta-in')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('+2342.0', 'ta-in')).toBeCloseTo(2342.0, supportedNumberOfFractionDigits);
     expect(getNumber('+20,000', 'ta-in')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
+    expect(getNumber('+20000', 'ta-in')).toBeCloseTo(20000, supportedNumberOfFractionDigits);
     expect(getNumber('+20,000.34', 'ta-in')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('+20000.34', 'ta-in')).toBeCloseTo(20000.34, supportedNumberOfFractionDigits);
     expect(getNumber('+2,00,000', 'ta-in')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
+    expect(getNumber('+200000', 'ta-in')).toBeCloseTo(200000, supportedNumberOfFractionDigits);
     expect(getNumber('+20,00,000', 'ta-in')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('+2000000', 'ta-in')).toBeCloseTo(2000000, supportedNumberOfFractionDigits);
     expect(getNumber('+1,20,54,100.55', 'ta-in')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('+12054100.55', 'ta-in')).toBeCloseTo(12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [0, 1]) It should return a possible decimal literal when given an
@@ -212,13 +228,21 @@ describe('Testing `getNumber` with `ta-in` locale on negative numbers', () => {
     expect(getNumber('-200.45', 'ta-in')).toBeCloseTo(-200.45, supportedNumberOfFractionDigits);
     expect(getNumber('-873.00', 'ta-in')).toBeCloseTo(-873.0, supportedNumberOfFractionDigits);
     expect(getNumber('-2,050', 'ta-in')).toBeCloseTo(-2050, supportedNumberOfFractionDigits);
+    expect(getNumber('-2050', 'ta-in')).toBeCloseTo(-2050, supportedNumberOfFractionDigits);
     expect(getNumber('-2,000.30', 'ta-in')).toBeCloseTo(-2000.3, supportedNumberOfFractionDigits);
+    expect(getNumber('-2000.30', 'ta-in')).toBeCloseTo(-2000.3, supportedNumberOfFractionDigits);
     expect(getNumber('-2,342.0', 'ta-in')).toBeCloseTo(-2342.0, supportedNumberOfFractionDigits);
+    expect(getNumber('-2342.0', 'ta-in')).toBeCloseTo(-2342.0, supportedNumberOfFractionDigits);
     expect(getNumber('-20,000', 'ta-in')).toBeCloseTo(-20000, supportedNumberOfFractionDigits);
+    expect(getNumber('-20000', 'ta-in')).toBeCloseTo(-20000, supportedNumberOfFractionDigits);
     expect(getNumber('-20,000.34', 'ta-in')).toBeCloseTo(-20000.34, supportedNumberOfFractionDigits);
+    expect(getNumber('-20000.34', 'ta-in')).toBeCloseTo(-20000.34, supportedNumberOfFractionDigits);
     expect(getNumber('-2,00,000', 'ta-in')).toBeCloseTo(-200000, supportedNumberOfFractionDigits);
+    expect(getNumber('-200000', 'ta-in')).toBeCloseTo(-200000, supportedNumberOfFractionDigits);
     expect(getNumber('-20,00,000', 'ta-in')).toBeCloseTo(-2000000, supportedNumberOfFractionDigits);
+    expect(getNumber('-2000000', 'ta-in')).toBeCloseTo(-2000000, supportedNumberOfFractionDigits);
     expect(getNumber('-1,20,54,100.55', 'ta-in')).toBeCloseTo(-12054100.55, supportedNumberOfFractionDigits);
+    expect(getNumber('-12054100.55', 'ta-in')).toBeCloseTo(-12054100.55, supportedNumberOfFractionDigits);
   });
 
   test(`(Automatically)(Range: [-1, 0]) It should return a possible decimal literal when given an
