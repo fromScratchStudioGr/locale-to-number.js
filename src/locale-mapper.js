@@ -42,7 +42,7 @@ const localeMapper = {
     decimal: '\\.',
   },
   'en-in': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
