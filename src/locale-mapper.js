@@ -47,7 +47,7 @@ const localeMapper = {
     indianNotation: true,
   },
   'en-nz': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-us': {
