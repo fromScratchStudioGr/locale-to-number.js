@@ -14,7 +14,7 @@ const localeMapper = {
     decimal: '\\,',
   },
   'de-ch': {
-    thousands: "['΄’]",
+    thousands: "['΄’]?",
     decimal: '\\.',
   },
   'de-de': {
