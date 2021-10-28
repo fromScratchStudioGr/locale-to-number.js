@@ -127,7 +127,7 @@ const localeMapper = {
     indianNotation: true,
   },
   'ta-lk': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
