@@ -6,56 +6,56 @@
  */
 const localeMapper = {
   'de': {
-    thousands: '\\.',
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'de-at': {
-    thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'de-ch': {
-    thousands: "['΄’]",
+    thousands: "['΄’]?",
     decimal: '\\.',
   },
   'de-de': {
-    thousands: '\\.',
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'en': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-au': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-ca': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-gb': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-ie': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-in': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
   'en-nz': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-us': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'en-za': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'es': {
@@ -63,15 +63,15 @@ const localeMapper = {
     decimal: '\\,',
   },
   'es-ar': {
-    thousands: '\\.',
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'es-cl': {
-    thousands: '\\.',
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'es-co': {
-    thousands: '\\.',
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'es-es': {
@@ -79,55 +79,55 @@ const localeMapper = {
     decimal: '\\,',
   },
   'es-mx': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'es-us': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
   },
   'fr': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'fr-be': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'fr-ca': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'fr-ch': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'fr-fr': {
-    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]',
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'hi': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
   'hi-in': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
   'ta': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
   'ta-in': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
   'ta-lk': {
-    thousands: '\\,',
+    thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
   },
