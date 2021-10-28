@@ -6,7 +6,7 @@
  */
 const localeMapper = {
   'de': {
-    thousands: '\\.',
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'de-at': {
