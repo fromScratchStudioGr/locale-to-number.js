@@ -120,6 +120,10 @@ const localeMapper = {
     thousands: '\\.?',
     decimal: '\\,',
   },
+  'pt-br': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'ta': {
     thousands: '\\,?',
     decimal: '\\.',
