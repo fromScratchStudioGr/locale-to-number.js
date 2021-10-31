@@ -151,6 +151,10 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
   },
+  'zh-cn': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
 };
 
 module.exports = localeMapper;
