@@ -147,6 +147,22 @@ const localeMapper = {
     thousands: '\\.',
     decimal: '\\,',
   },
+  'zh': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
+  'zh-cn': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
+  'zh-hk': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
+  'zh-tw': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
 };
 
 module.exports = localeMapper;
