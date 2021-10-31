@@ -116,6 +116,10 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true,
   },
+  'pt': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'ta': {
     thousands: '\\,?',
     decimal: '\\.',
