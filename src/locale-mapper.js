@@ -143,6 +143,14 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true,
   },
+  'tr': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'tr-tr': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'el': {
     thousands: '\\.',
     decimal: '\\,',
