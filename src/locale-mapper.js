@@ -128,6 +128,18 @@ const localeMapper = {
     thousands: "['΄’]?",
     decimal: '\\.',
   },
+  'nl': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'nl-be': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'nl-nl': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'pt': {
     thousands: '\\.?',
     decimal: '\\,',
@@ -138,6 +150,14 @@ const localeMapper = {
   },
   'pt-pt': {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'ro': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'ro-ro': {
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'ta': {
@@ -154,6 +174,14 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
     indianNotation: true,
+  },
+  'tr': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'tr-tr': {
+    thousands: '\\.?',
+    decimal: '\\,',
   },
   'el': {
     thousands: '\\.',
