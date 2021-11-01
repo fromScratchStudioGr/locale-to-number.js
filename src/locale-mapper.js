@@ -116,6 +116,18 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true,
   },
+  'nl': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'nl-be': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'nl-nl': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'pt': {
     thousands: '\\.?',
     decimal: '\\,',
