@@ -5,6 +5,14 @@
  * https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Supported-Locales
  */
 const localeMapper = {
+  'da': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'da-dk': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'de': {
     thousands: '\\.?',
     decimal: '\\,',
