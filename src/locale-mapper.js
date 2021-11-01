@@ -94,6 +94,14 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
   },
+  'el': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'el-gr': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'fr': {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
@@ -197,10 +205,6 @@ const localeMapper = {
   },
   'tr-tr': {
     thousands: '\\.?',
-    decimal: '\\,',
-  },
-  'el': {
-    thousands: '\\.',
     decimal: '\\,',
   },
   'zh': {
