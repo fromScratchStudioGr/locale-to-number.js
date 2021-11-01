@@ -128,6 +128,14 @@ const localeMapper = {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
+  'ro': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'ro-ro': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'ta': {
     thousands: '\\,?',
     decimal: '\\.',
