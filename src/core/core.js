@@ -11,10 +11,10 @@
 function constructExtractionRegex(thousandsSeparator, decimalSeparator, indianNotation = false) {
   if (indianNotation) {
     return new RegExp(
-      `^[+|-]?(([1-9]{1}[0-9]{0,1}${thousandsSeparator})+([0-9]{2}${thousandsSeparator})*[0-9]{3}|[1-9]{1}[0-9]{0,2}|0)(${decimalSeparator}[0-9]+)?$`
+      `^[\+\-\−]?(([1-9]{1}[0-9]{0,1}${thousandsSeparator})+([0-9]{2}${thousandsSeparator})*[0-9]{3}|[1-9]{1}[0-9]{0,2}|0)(${decimalSeparator}[0-9]+)?$`
     );
   } else {
-    return new RegExp(`^[+|-]?([1-9]{1}[0-9]{0,2}(${thousandsSeparator}[0-9]{3})*|0)(${decimalSeparator}[0-9]+)?$`);
+    return new RegExp(`^[\+\-\−]?([1-9]{1}[0-9]{0,2}(${thousandsSeparator}[0-9]{3})*|0)(${decimalSeparator}[0-9]+)?$`);
   }
 }
 
@@ -33,7 +33,10 @@ function cleanNumberRepresentation(numberRepresentation, regex, localeConfigurat
     // sure the `decimal` separator is the `dot`.
     const cleanNumberRepresentation = numberRepresentation
       .replace(new RegExp(localeConfiguration.thousands, 'g'), '')
-      .replace(new RegExp(localeConfiguration.decimal), '.');
+      .replace(new RegExp(localeConfiguration.decimal), '.')
+      // This is needed because the `−` characters breaks the
+      // `parseFloat` function.
+      .replace(new RegExp('\−'), '-');
 
     return cleanNumberRepresentation;
   } else {
