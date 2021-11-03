@@ -270,8 +270,6 @@ describe('Testing `getNumber` with `no` locale on negative numbers', () => {
   test(`(Automatically)(Range: [-1.000, -100]) It should return a possible decimal literal when given an
   negative string representation`, () => {
     const testCases = testCaseGenerator('no', -1000, -100, 1000);
-
-    console.log(testCases);
     testCases.forEach((testCase) => {
       expect(getNumber(testCase.stringRepresentation, 'no')).toBeCloseTo(
         testCase.groundTruth,
