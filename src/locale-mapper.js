@@ -94,6 +94,14 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
   },
+  'fi': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'fi-fi': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
   'el': {
     thousands: '\\.?',
     decimal: '\\,',
