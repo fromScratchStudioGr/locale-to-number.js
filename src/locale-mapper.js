@@ -5,6 +5,14 @@
  * https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Supported-Locales
  */
 const localeMapper = {
+  'cs': {
+    thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'cs-cz': {
+    thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
   'da': {
     thousands: '\\.?',
     decimal: '\\,',
