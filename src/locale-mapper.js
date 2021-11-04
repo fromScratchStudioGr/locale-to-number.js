@@ -6,11 +6,11 @@
  */
 const localeMapper = {
   'cs': {
-    thousands: '\\s?',
+    thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'cs-cz': {
-    thousands: '\\s?',
+    thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
   'de': {
