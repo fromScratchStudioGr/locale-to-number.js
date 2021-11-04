@@ -13,6 +13,14 @@ const localeMapper = {
     thousands: '[\\u202f\\u00a0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
   },
+  'da': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'da-dk': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'de': {
     thousands: '\\.?',
     decimal: '\\,',
@@ -94,6 +102,22 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
   },
+  'fi': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'fi-fi': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'el': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'el-gr': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
   'fr': {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
     decimal: '\\,',
@@ -124,6 +148,54 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true,
   },
+  'id': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'id-id': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'it': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'it-it': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'it-ch': {
+    thousands: "['΄’]?",
+    decimal: '\\.',
+  },
+  'nl': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'nl-be': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'nl-nl': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'no': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'no-no': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'pl': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'pl-pl': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
   'pt': {
     thousands: '\\.?',
     decimal: '\\,',
@@ -134,6 +206,14 @@ const localeMapper = {
   },
   'pt-pt': {
     thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
+  'ro': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'ro-ro': {
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'ta': {
@@ -151,8 +231,12 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true,
   },
-  'el': {
-    thousands: '\\.',
+  'tr': {
+    thousands: '\\.?',
+    decimal: '\\,',
+  },
+  'tr-tr': {
+    thousands: '\\.?',
     decimal: '\\,',
   },
   'zh': {
