@@ -176,6 +176,14 @@ const localeMapper = {
     thousands: "['΄’]?",
     decimal: '\\.',
   },
+  'jp': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
+  'jp-jp': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
   'nl': {
     thousands: '\\.?',
     decimal: '\\,',
