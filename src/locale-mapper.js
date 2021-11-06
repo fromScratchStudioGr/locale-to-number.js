@@ -180,6 +180,10 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
   },
+  'jp-jp': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
   'nl': {
     thousands: '\\.?',
     decimal: '\\,',
