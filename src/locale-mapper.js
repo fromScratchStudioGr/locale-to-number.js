@@ -184,6 +184,14 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
   },
+  'ko': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
+  'ko-kr': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
   'nl': {
     thousands: '\\.?',
     decimal: '\\,',
