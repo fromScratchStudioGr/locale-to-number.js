@@ -255,6 +255,14 @@ const localeMapper = {
     decimal: '\\.',
     indianNotation: true,
   },
+  'th': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
+  'th-tr': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
   'tr': {
     thousands: '\\.?',
     decimal: '\\,',
