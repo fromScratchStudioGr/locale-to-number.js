@@ -240,6 +240,10 @@ const localeMapper = {
     thousands: '\\.?',
     decimal: '\\,',
   },
+  'ru': {
+    thousands: '[\\u202F\\u00A0\\u2000\\u2001\\u2003\\s]?',
+    decimal: '\\,',
+  },
   'ta': {
     thousands: '\\,?',
     decimal: '\\.',
