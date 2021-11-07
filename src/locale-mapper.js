@@ -259,6 +259,10 @@ const localeMapper = {
     thousands: '\\,?',
     decimal: '\\.',
   },
+  'th-tr': {
+    thousands: '\\,?',
+    decimal: '\\.',
+  },
   'tr': {
     thousands: '\\.?',
     decimal: '\\,',
