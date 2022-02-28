@@ -1,3 +1,3 @@
 const getNumber = require('./src/get-number/get-number');
 
-exports.getNumber = getNumber;
+module.exports = getNumber;
