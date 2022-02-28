@@ -1,4 +1,3 @@
-// Dummy import.
-const createTestingString = require('./src/create-template-string/create-template-string');
+const getNumber = require('./src/get-number/get-number');
 
-module.exports = createTestingString;
+exports.getNumber = getNumber;
