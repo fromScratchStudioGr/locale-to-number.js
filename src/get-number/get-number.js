@@ -8,6 +8,11 @@ const { constructExtractionRegex, cleanNumberRepresentation } = require('../core
  * @returns The number in a decimal literal format.
  */
 function getNumber(numberRepresentation, locale) {
+  if (locale == null) {
+    console.warn(`Locale must be specified`);
+    return null;
+  }
+
   if (localeMapper[locale.toLowerCase()] != null) {
     const localeConfiguration = localeMapper[locale.toLowerCase()];
     const regex = constructExtractionRegex(
