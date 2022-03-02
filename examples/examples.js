@@ -1,0 +1,1 @@
+const getNumber = require('locale-number-to.js');
