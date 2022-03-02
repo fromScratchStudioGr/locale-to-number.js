@@ -390,10 +390,6 @@ describe('Testing `getNumber` with `es-CO` locale on negative numbers', () => {
 });
 
 describe('Testing `getNumber` with `es-CO` locale on invalid cases', () => {
-  test(`(Manually) It should return 'null' when locale is not supported`, () => {
-    expect(getNumber('120', 'unsupported-locale')).toBe(null);
-  });
-
   test(`(Manually) It should return 'null' when the given number does not
   match the given locale`, () => {
     expect(getNumber('120,000.23', 'es-CO')).toBe(null);

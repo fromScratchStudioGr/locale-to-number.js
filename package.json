@@ -4,10 +4,11 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
   "author": "George Kamtziridis, george@fromscratch.gr",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "jest": "^27.2.5"
   }
