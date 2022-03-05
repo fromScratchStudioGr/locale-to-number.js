@@ -2,7 +2,8 @@
   "name": "locale-number-to.js",
   "version": "0.0.1",
   "description": "",
-  "main": "main.js",
+  "source": "locale-to-number.js",
+  "main": "dist/locale-to-number.js",
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --coverage"
@@ -10,6 +11,7 @@
   "author": "George Kamtziridis, george@fromscratch.gr",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^27.2.5"
+    "jest": "^27.2.5",
+    "parcel": "^2.3.2"
   }
 }
