@@ -381,4 +381,18 @@ describe('Testing `getNumber` with `es-ES` locale on invalid cases', () => {
     expect(getNumber('12 000.23', 'es-ES')).toBe(null);
     expect(getNumber("12'000,23", 'es-ES')).toBe(null);
   });
+
+  test(`(Manually) It should return 'null' when locale is not supported`, () => {
+    expect(getNumber('120', 'unsupported-locale')).toBe(null);
+    expect(getNumber('120', 'gibberish')).toBe(null);
+  });
+
+  test(`(Manually) It should return 'null' when locale is not specified`, () => {
+    expect(getNumber('120')).toBe(null);
+    expect(getNumber('34.13')).toBe(null);
+    expect(getNumber('34,13')).toBe(null);
+    expect(getNumber('-34,13')).toBe(null);
+    expect(getNumber('-34,13')).toBe(null);
+    expect(getNumber('-340,130')).toBe(null);
+  });
 });
