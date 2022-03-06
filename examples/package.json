@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "locale-number-to.js": "file:.."
+    "locale-to-number.js": "file:.."
   }
 }

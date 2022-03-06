@@ -1,9 +1,10 @@
 {
-  "name": "locale-number-to.js",
+  "name": "locale-to-number.js",
   "version": "0.0.1",
   "description": "",
   "source": "locale-to-number.js",
   "main": "dist/locale-to-number.js",
+  "files": ["dist/*.js"],
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --coverage"
