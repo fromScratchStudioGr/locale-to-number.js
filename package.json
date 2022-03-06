@@ -1,6 +1,6 @@
 {
   "name": "@fromscratch-studio-gr/locale-to-number.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert string representations of numbers, in a certain locale, to decimal literal numbers",
   "source": "locale-to-number.js",
   "main": "dist/locale-to-number.js",
