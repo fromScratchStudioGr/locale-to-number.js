@@ -8,8 +8,14 @@ Convert string representations of numbers, in a certain locale, to decimal liter
 
 For more details, check the [Wiki](https://github.com/fromScratchStudioGr/locale-to-number.js/wiki) page.
 
-## Examples
+## Installation / Examples
 The library is pretty straight forward, since it is the inverse of the [Number.toLocaleString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) utility.
+
+To install run:
+
+```bash
+npm install --save @fromscratch-studio-gr/locale-to-number.js
+```
 
 You have to provide the string representation of the number alongside the locale into the `getNumber()` function. The supported locales can be found [here](https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Supported-Locales).
 
