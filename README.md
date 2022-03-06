@@ -14,7 +14,7 @@ The library is pretty straight forward, since it is the inverse of the [Number.t
 You have to provide the string representation of the number alongside the locale into the `getNumber()` function. The supported locales can be found [here](https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Supported-Locales).
 
 ```Javascript
-const getNumber = require('locale-to-number.js');
+const getNumber = require('@fromscratch-studio-gr/locale-to-number.js');
 
 // English Locale.
 console.log(getNumber('0.0', 'en'));
