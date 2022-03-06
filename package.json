@@ -1,15 +1,26 @@
 {
   "name": "locale-to-number.js",
   "version": "0.0.1",
-  "description": "",
+  "description": "Convert string representations of numbers, in a certain locale, to decimal literal numbers",
   "source": "locale-to-number.js",
   "main": "dist/locale-to-number.js",
-  "files": ["dist/*.js"],
+  "files": [
+    "dist/*.js"
+  ],
   "scripts": {
-    "test": "jest",
-    "test-coverage": "jest --coverage"
+    "test": "jest --no-cache",
+    "test-coverage": "jest --no-cache --coverage"
   },
   "author": "George Kamtziridis, george@fromscratch.gr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fromScratchStudioGr/locale-to-number.js.git"
+  },
+  "keywords": [
+    "locale",
+    "number",
+    "string"
+  ],
   "license": "MIT",
   "devDependencies": {
     "jest": "^27.2.5",

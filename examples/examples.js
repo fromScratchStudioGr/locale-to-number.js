@@ -1,4 +1,4 @@
-const getNumber = require('locale-to-number.js');
+const getNumber = require('locale-to-number.js/dist/locale-to-number');
 
 // English Locale.
 console.log(getNumber('0.0', 'en'));

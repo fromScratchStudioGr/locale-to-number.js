@@ -1,6 +1,8 @@
 # locale-to-number.js
 [![GitHub license](https://img.shields.io/github/license/fromScratchStudioGr/locale-to-number.js)](https://github.com/fromScratchStudioGr/locale-to-number.js/blob/main/LICENSE)
 
+Convert string representations of numbers, in a certain locale, to decimal literal numbers.
+
 ## Introduction
 *locale-to-number.js* is a library that aids developers to convert string representations of numbers, in a certain locale, to decimal literal numbers. The exact opposite operation is available either by the [Intl.NumberFormat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor or the [Number.toLocaleString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) function. However, converting them back to decimal is not trivial. That's where *locale-to-number.js* comes into play.
 
@@ -59,6 +61,10 @@ console.log(getNumber('+1,20,54,100.55', 'en-IN'));
 ```
 
 Keep in mind, we currently support up to 19 fraction digits when decimals numbers are used.
+
+## Testing Coverage
+
+<img src="./assets/coverage.png" alt="Testing Coverage" width="650">
 
 ## Contributing
 Thinking of contributing to the project? Read the instructions [here](https://github.com/fromScratchStudioGr/locale-to-number.js/wiki/Contributing).
