@@ -8,8 +8,8 @@
     "dist/*.js"
   ],
   "scripts": {
-    "test": "jest",
-    "test-coverage": "jest --coverage"
+    "test": "jest --no-cache",
+    "test-coverage": "jest --no-cache --coverage"
   },
   "author": "George Kamtziridis, george@fromscratch.gr",
   "repository": {
