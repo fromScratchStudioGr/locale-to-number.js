@@ -1,3 +1,7 @@
+<div align="center">
+   <img src="./assets/logo.svg" alt="logo">
+</div>
+
 # locale-to-number.js
 ![npm (scoped)](https://img.shields.io/npm/v/@fromscratch-studio-gr/locale-to-number.js)
 [![GitHub license](https://img.shields.io/github/license/fromScratchStudioGr/locale-to-number.js)](https://github.com/fromScratchStudioGr/locale-to-number.js/blob/main/LICENSE)
