@@ -1,4 +1,4 @@
-<img src="./assets/logo.svg" alt="Testing Coverage" width="650">
+<img src="./assets/logo.svg" alt="logo">
 
 # locale-to-number.js
 ![npm (scoped)](https://img.shields.io/npm/v/@fromscratch-studio-gr/locale-to-number.js)
