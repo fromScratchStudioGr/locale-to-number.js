@@ -38,7 +38,7 @@ function testCaseGenerator(locale, from, to, numberOfTestCases) {
         stringRepresentation: new Intl.NumberFormat(locale.toLowerCase(), {
           minimumFractionDigits: supportedNumberOfFractionDigits + 1,
           maximumFractionDigits: supportedNumberOfFractionDigits + 1,
-        }).format(groundTruth),
+        }).format(groundTruth).replace(/[^.,\d +\u2212\u002d\ufe63\uff0d]/g, ''),
       });
     } else {
       const groundTruth = randomFloat(from, to);
@@ -47,7 +47,7 @@ function testCaseGenerator(locale, from, to, numberOfTestCases) {
         stringRepresentation: new Intl.NumberFormat(locale.toLowerCase(), {
           minimumFractionDigits: supportedNumberOfFractionDigits + 1,
           maximumFractionDigits: supportedNumberOfFractionDigits + 1,
-        }).format(groundTruth),
+        }).format(groundTruth).replace(/[^.,\d +\u2212\u002d\ufe63\uff0d]/g, ''),
       });
     }
     integer = !integer;
